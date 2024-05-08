@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: rgb(246, 241, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin: 10px;
+            background: linear-gradient(to right, rgb(253,65,142) -20%, rgb(131, 83, 229) 50%, rgb(12, 184, 208)120%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        form {
+            background-color: rgb(53, 53, 53);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            max-width: 80%;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        input[type="text"]:hover,
+        input[type="password"]:hover {
+            border: 2px solid rgb(253,65,142);
+        }
+
+        input[type="submit"],
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            color: aliceblue;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(to right, rgb(253,65,142) -20%, rgb(131, 83, 229) 50%, rgb(12, 184, 208)120%);
+            cursor: pointer;
+            width: 100%;
+            height: fit-content;
+            margin-top: -5px;
+        }
+
+        input[type="submit"]:hover,
+        button:hover {
+            border: 2px solid rgb(246, 241, 255);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
