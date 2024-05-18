@@ -392,7 +392,7 @@
   </div>
 
   <nav id="desktop-nav">
-    <div class="logo"><a href="user_view.php"><img src="assets/logo-white.png" alt="logo icon"></a>Welcome, <?php echo $name; ?>!</div>
+    <div class="logo"><a href="index.php"><img src="assets/logo-white.png" alt="logo icon"></a>Welcome, <?php echo $name; ?>!</div>
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -407,7 +407,7 @@
   </nav>
 
   <nav id="hamburger-nav">
-    <div class="logo"><a href="user_view.php"><img src="assets/logo-white.png" alt="logo icon"></a>Welcome, <?php echo $name; ?>!</div>
+    <div class="logo"><a href="index.php"><img src="assets/logo-white.png" alt="logo icon"></a>Welcome, <?php echo $name; ?>!</div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
@@ -444,13 +444,13 @@
         </div>
         <div id="socials-container">
           <img src="./assets/facebook.png" alt="My LinkedIn profile" class="icon"
-            onclick="window.open('https://www.facebook.com/GianneBacay', '_blank')" />
+            onclick="window.open('<?php echo $fb_link; ?>', '_blank')" />
           <img src="./assets/tiktok.png" alt="My LinkedIn profile" class="icon"
-            onclick="window.open('https://www.tiktok.com/@gpbacay', '_blank')" />
+            onclick="window.open('<?php echo $tt_link; ?>', '_blank')" />
           <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-            onclick="window.open('https://www.linkedin.com/in/gianne-bacay-195527290/', '_blank')" />
+            onclick="window.open('<?php echo $li_link; ?>', '_blank')" />
           <img src="./assets/github.png" alt="My Github profile" class="icon"
-            onclick="window.open('https://github.com/gpbacay', '_blank')" />
+            onclick="window.open('<?php echo $gh_link; ?>', '_blank')" />
         </div> <!-- end of socials-container -->
         <div class="profile-btn-div">
           <button id="editProfileBtn" class="btn btn-color-1">Edit Profile</button>
@@ -498,8 +498,8 @@
           </script>
           <br>
           <div class="modal-buttons">
-            <button type="submit" name="saveProfileBtn">Save</button>
-            <button type="button" id="cancelProfileBtn">Cancel</button>
+            <button type="submit" name="saveProfileBtn" class="saveBtn">Save</button>
+            <button type="button" id="cancelProfileBtn" class="cancelBtn">Cancel</button>
           </div>
         </div> <!-- end of modal-content -->
       </form>
@@ -555,8 +555,8 @@
           <label for="biography">Biography:</label>
           <textarea id="biography" name="biography" class="about-inputs" placeholder="<?php echo $biography; ?>" required><?php echo $biography; ?></textarea> <br>
           <div class="modal-buttons">
-            <button type="submit" name="saveAboutBtn">Save</button>
-            <button type="button" id="cancelAboutBtn">Cancel</button>
+            <button type="submit" name="saveAboutBtn" class="saveBtn">Save</button>
+            <button type="button" id="cancelAboutBtn" class="cancelBtn">Cancel</button>
           </div>
         </div> <!-- end of modal-content -->
       </form>
@@ -613,8 +613,8 @@
                   <input type="text" id="proficiency_level" name="proficiency_level" class="experience-inputs" placeholder="<?php echo $proficiency_level; ?>" required>
                   <!-- Buttons -->
                   <div class="modal-buttons">
-                    <button type="submit" name="saveExperienceBtn">Save</button>
-                    <button type="button" id="cancelExperienceBtn">Cancel</button>
+                    <button type="submit" name="saveExperienceBtn" class="saveBtn">Save</button>
+                    <button type="button" id="cancelExperienceBtn" class="cancelBtn">Cancel</button>
                   </div>
                 </div> <!-- end of modal-content -->
               </form>
@@ -622,7 +622,7 @@
             <script src="scripts/experience.js"></script>
         </div> <!-- end of about-containers -->
     </div> <!-- end of experience-details-container -->
-    <script src="scripts/populate_experience_data.js"></script>
+    <script src="./scripts/populate_experience_data.js"></script>
   </section> <!-- end of experience section -->
 
   
@@ -669,15 +669,15 @@
               <label for="projTitle">Project Title:</label>
               <input type="text" id="projTitle" name="projTitle" class="projects-inputs" placeholder="<?php echo $projTitle; ?>" required>
               <label for="projDesc">Project Description:</label>
-              <textarea id="projDesc" name="projDesc" class="projects-inputs" placeholder="<?php echo $projDesc; ?>" required><?php echo $projDesc; ?></textarea>
+              <textarea id="projDesc" name="projDesc" class="projects-inputs" placeholder="<?php echo $projDesc; ?>" required></textarea>
               <label for="projGh">Github Link:</label>
               <input type="text" id="projGh" name="projGh" class="projects-inputs" placeholder="<?php echo $projGh; ?>" required>
               <label for="projGdrive">Drive Link:</label>
               <input type="text" id="projGdrive" name="projGdrive" class="projects-inputs" placeholder="<?php echo $projGdrive; ?>" required>
               <!-- Buttons -->
               <div class="modal-buttons">
-                <button type="submit" name="saveProjectsBtn">Save</button>
-                <button type="button" id="cancelProjectsBtn">Cancel</button>
+                <button type="submit" name="saveProjectsBtn" class="saveBtn">Save</button>
+                <button type="button" id="cancelProjectsBtn" class="cancelBtn">Cancel</button>
               </div>
             </div> <!-- end of modal-content -->
           </form>
@@ -686,7 +686,7 @@
 
       </div> <!-- end of about-containers -->
     </div> <!-- end of experience-details-container -->
-    <script src="scripts/populate_projects_data.js"></script>
+    <script src="./scripts/populate_projects_data.js"></script>
   </section> <!-- end of prohjects section -->
 
 
@@ -722,8 +722,8 @@
           <input type="email" id="gmail_link" name="gmail_link" class="contact-inputs" value="<?php echo $gmail_link; ?>" required><br><br>
           <!-- Buttons for saving or canceling changes -->
           <div class="modal-buttons">
-            <button type="submit" name="saveContactBtn">Save</button>
-            <button type="button" id="cancelContactBtn">Cancel</button>
+            <button type="submit" name="saveContactBtn" class="saveBtn">Save</button>
+            <button type="button" id="cancelContactBtn" class="cancelBtn">Cancel</button>
           </div>
         </div> <!-- end of modal-content -->
       </form>
